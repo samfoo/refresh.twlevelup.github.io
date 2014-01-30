@@ -47,9 +47,17 @@ section, footer, header {
   margin: 0 auto;
 }
 
+footer {
+  padding-bottom: 100px;
+  @media #{$phone-screen} {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .tw {
   max-width: 200px;
-  margin-top: 45px;
+  margin-top: 15px;
 }
 
 .border-line {
@@ -95,35 +103,52 @@ section, footer, header {
   }
 }
 
-.alt {
-  background: url(/assets/bg.png) repeat;
-}
 
-h1.boom {
-  color: #464646;
-  font-size: 3em;
-  font-weight: 300;
-}
-
-#get-updates {
-  h3 {
-    font-size: 1.5em;
-    font-weight: 300;
-    color: #999;
-  }
-
-  .details {
-    @media #{$phone-screen} {
-      padding: 10px;
-      width: 100%;
-    }
-
-    .sign-up {
-      top: -2px;
-      position: relative;
+#hero {
+  max-width: 100%;
+  padding: 100px 0;
+  background: pink url('/assets/images/callout-pink.jpg') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  h1.boom {
+    color: #fffc81;
+    font-size: 4em;
+    letter-spacing: -0.07em;
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 1);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 1em;
+    span {
+      color: white;
     }
   }
+  #get-updates {
+    h3 {
+      font-size: 1.5em;
+      font-weight: 300;
+      color: white;
+      text-shadow: 0px 1px 4px rgba(0, 0, 0, 1);
+    }
+
+    .details {
+      @media #{$phone-screen} {
+        padding: 10px;
+        width: 100%;
+      }
+
+      .sign-up {
+        top: -2px;
+        position: relative;
+      }
+    }
+  }
+  @media #{$phone-screen} {
+    h1.boom {
+      font-size: 2em;
+    }
+  }
 }
+
 
 section#about {
   margin: 0;
@@ -153,11 +178,14 @@ section#photos {
   }
 
   img.small {
-    width: 30%;
+    margin-left: 0;
+    width: 31%;
+    float: right;
   }
 
   img.large {
-    width: 60%;
+    margin-right: 0;
+    width: 63%;
   }
 }
 
@@ -212,7 +240,6 @@ section#upcoming-events {
   }
 
   .earth-line {
-    max-width: 500px;
 
     @media #{$phone-screen} {
       display: none;
@@ -260,7 +287,6 @@ section#testimonials {
     small {
       color: #5c5c5c;
       display: inline-block;
-      padding-top: 10px;
     }
 
     img {
@@ -273,11 +299,6 @@ section#testimonials {
 }
 
 #beard {
-  .mascot {
-    margin-bottom: 50px;
-    max-width: 200px;
-  }
-
   .social-links {
     margin: 15px auto;
 
